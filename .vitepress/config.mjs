@@ -7,16 +7,25 @@ export default defineConfig({
   title: "学习文档项目",
   description: "A VitePress Site",
   themeConfig: {
+    outlineTitle: "文章目录",
+    outline: [2, 6],
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', items : [
-          {text:"首页" ,link:"/"}
-        ] },
-      { text: 'Examples', link: '/markdown-examples' },
+      { text: 'Home', link:'/' },
       {text :"java" , items :[
-          {text: "基础语法" ,link: '/markdown-examples'}
+          {text: "基础语法" ,link: '/docs/Java/Basic_features'},
+          {text: "Java并发基础知识" ,link: '/docs/Java/basic_concurrent'},
+
         ]},
-      {text:"两侧栏样式",link:'/two_side_example'}
+      {text:"数据结构与算法",items : [
+          {text: "排序算法" ,link:'/docs/Data _Structures_Algorithms/sorts'},
+          {text: "查询算法" ,link:'/docs/Data _Structures_Algorithms/search'},
+          {text: "树" ,link:'/docs/Data _Structures_Algorithms/tree'},
+          {text: "图" ,link:'/docs/Data _Structures_Algorithms/graph'},
+        ]},
+      {text : "框架学习" , items:[
+          {text: "netty" ,link: '/docs/Java/netty'},
+        ]}
     ],
 
     // sidebar: [
@@ -59,7 +68,30 @@ export default defineConfig({
           },
         },
       },
-    }
+    },
+    // 配置markdown扩展
+    markdown: {
+      lineNumbers: true, // 开启代码块行号
+      // options for markdown-it-anchor
+      // https://github.com/valeriangalliat/markdown-it-anchor#usage
+      // anchor: {
+      //   permalink: markdownItAnchor.permalink.headerLink(),
+      // },
+
+      // // options for @mdit-vue/plugin-toc
+      // // https://github.com/mdit-vue/mdit-vue/tree/main/packages/plugin-toc#options
+      // toc: { level: [2, 3] },
+      // config: (md) => {
+      //   // use more markdown-it plugins!
+      //   md.use(tocPlugin);
+      // },
+    },
+    mermaid: {
+      // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
+    },
+    mermaidPlugin: {
+      class: "mermaid my-class", // set additional css classes for parent container
+    },
 
   }
 })
