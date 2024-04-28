@@ -1,6 +1,6 @@
 [TOC]
 ### Netty 学习之路思维导图
-![f2f2a78258f9a3bd73eb5a8c2b3c84c8.png](en-resource://database/1087:1)
+
 
 
 ### 为什么选择Netty?
