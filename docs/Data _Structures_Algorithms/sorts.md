@@ -60,31 +60,26 @@ public static void insertionSort(int[] arr){     int len = arr.length;   
 ### 希尔排序
 #### 基本思想
 希尔排序是优化的插入排序
-![15f3c2471fbf6e19b8005965e1bd7986.png](en-resource://database/990:1)
+
 ### 快速排序
 快速排序是冒泡排序的改进
-![ef2d7f24b4de5181dfc0c14bac76624c.png](en-resource://database/992:1)
+
 ### 归并排序
 
 归并排序（merge sort）是利用 归并 的思想实现的排序方法，该算法采用经典的 分治（divide-and-conquer）策略 ：
 分（divide）：将问题分成一些小的问题，然后递归求解
 治（conquer）：将分的阶段得到的各答案「修补」在一起
-![a1021d93fa261e8f0677592057683f7a.png](en-resource://database/994:1)
-![471ad6067295438e118b2b09e891901c.png](en-resource://database/996:1)
+
 
 ### 基数排序
 
 **正常基数排序**对**负数**不会进行排序，但可以找出最下负数并每个数减去最小负数，使得所排序列都为正最后在还原回去加上那个最小值
 
-![3d90eda12024d321a9630514b1ab7334.png](en-resource://database/1008:1)
-![a49da16c020bd0ef301443311ba1bfee.png](en-resource://database/1010:1)
 
 ### 堆排序
-![8b563984536b3eece28c6abb7d301787.png](en-resource://database/1031:1)
 
-![84b3bdd84fb25980f614bc50042011da.png](en-resource://database/1025:1)
 优先队列和堆存入的结构相似
-![0ed3422c9ba34fa5d7f348b53ea22bcf.png](en-resource://database/1027:1)
+
 对常见应用
-![149d0e8dde484bef7d4cc77d181d9d63.png](en-resource://database/1029:1)
+
 ### 外部排序
