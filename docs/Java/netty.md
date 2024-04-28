@@ -1,6 +1,6 @@
-[TOC]
-### Netty 学习之路思维导图
 
+### Netty 学习之路思维导图
+<img src="/images/Netty_road.png" title="netty 学习之路" width="450px" height="200px">
 
 
 ### 为什么选择Netty?
