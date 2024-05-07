@@ -25,6 +25,9 @@ export default defineConfig({
         ]},
       {text : "框架学习" , items:[
           {text: "netty" ,link: '/docs/Java/netty'},
+        ]},
+      {text : '运动&健身&康复',items:[
+          {text: 'NSCA-CSCS体能协会体能教练' , link: '/docs/exercise/NSCA-CSCS'}
         ]}
     ],
 
