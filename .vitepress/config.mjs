@@ -1,9 +1,23 @@
 import { defineConfig } from 'vitepress'
+import mdItCustomAttrs from "markdown-it-custom-attrs";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base :"/docs_web",
-  head: [["link", { rel: "icon", href: "logo_dingding.png" }]],
+  head: [["link", { rel: "icon", href: "logo_dingding.png" }],
+    [
+    "link",
+    {
+      rel: "stylesheet",
+      href: "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css",
+    },
+  ],
+    [
+      "script",
+      {
+        src: "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js",
+      },
+    ]],
   title: "学习文档项目",
   description: "A VitePress Site",
   themeConfig: {
@@ -88,6 +102,15 @@ export default defineConfig({
       //   // use more markdown-it plugins!
       //   md.use(tocPlugin);
       // },
+      math: true,
+      config: (md) => {
+        // use more markdown-it plugins!
+        md.use(mdItCustomAttrs, "image", {
+          "data-fancybox": "gallery",
+              allowedAttributes: ['class'], // 只允许 class 属性
+        }
+        );
+      }
     },
     mermaid: {
       // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
